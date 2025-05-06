@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh Stafki - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide-react.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+        }
+        .resume-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px; /* Reduced padding for smaller screens */
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .resume-container {
+                padding: 40px; /* Original padding for larger screens */
+            }
+        }
+        .section-title {
+            font-size: 1.75rem; /* 28px */
+            font-weight: 700;
+            color: #1a202c; /* Darker gray */
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4A90E2; /* Accent color blue */
+            display: flex;
+            align-items: center;
+        }
+        .section-title svg {
+            margin-right: 12px;
+            color: #4A90E2;
+        }
+        .experience-item, .education-item, .certification-item, .award-item {
+            margin-bottom: 24px;
+            padding: 20px;
+            background-color: #f9fafb; /* Very light gray for item backgrounds */
+            border-radius: 8px;
+            border-left: 4px solid #4A90E2; /* Accent border */
+        }
+        .experience-item:last-child, .education-item:last-child, .certification-item:last-child, .award-item:last-child {
+            margin-bottom: 0;
+        }
+        .job-title {
+            font-size: 1.25rem; /* 20px */
+            font-weight: 600;
+            color: #2d3748; /* Dark gray */
+        }
+        .company-name {
+            font-size: 1.1rem; /* 17.6px */
+            font-weight: 500;
+            color: #4A5568; /* Medium gray */
+        }
+        .date-location {
+            font-size: 0.9rem; /* 14.4px */
+            color: #718096; /* Lighter gray */
+            margin-bottom: 8px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #4A5568; /* Medium gray for list items */
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .skill-tag {
+            background-color: #E2E8F0; /* Light gray-blue */
+            color: #2D3748; /* Dark gray */
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 0.875rem; /* 14px */
+            margin-right: 8px;
+            margin-bottom: 8px;
+            display: inline-block;
+            font-weight: 500;
+        }
+        .contact-link {
+            color: #4A90E2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact-link:hover {
+            color: #357ABD; /* Darker blue on hover */
+        }
+        .header-icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        .footer-text {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.875rem;
+            color: #718096;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-800">Josh Stafki</h1>
+            <p class="text-xl text-gray-600 mt-2">Accounts Management | Data Analysis | Order Entry</p>
+            <div class="mt-6 flex flex-wrap justify-center items-center space-x-0 sm:space-x-6 space-y-2 sm:space-y-0">
+                <a href="mailto:joshstafki@gmail.com" class="contact-link text-lg flex items-center">
+                    <svg class="header-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    joshstafki@gmail.com
+                </a>
+                <span class="text-gray-400 hidden sm:inline">|</span>
+                <a href="tel:763-910-1792" class="contact-link text-lg flex items-center">
+                    <svg class="header-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.308 1.154a11.034 11.034 0 005.37 5.37l1.154-2.308a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    (763)-910-1792
+                </a>
+                <span class="text-gray-400 hidden sm:inline">|</span>
+                <a href="https://www.linkedin.com/in/joshua-stafki" target="_blank" rel="noopener noreferrer" class="contact-link text-lg flex items-center">
+                    <svg class="header-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2" stroke="none"></circle></svg>
+                    LinkedIn: @ Joshua Stafki
+                </a>
+            </div>
+        </header>
+
+        <section class="mb-10">
+            <h2 class="section-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 12v0"></path></svg>
+                Summary
+            </h2>
+            <p class="text-gray-700 leading-relaxed">
+                Aspiring business professional with over five years of experience in customer
+                service leadership and food service. Experienced in retail ERP and order
+                fulfillment software, including order processing, vendor communication, and
+                customer resolution.
+            </p>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="section-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L8.6 3.7A2 2 0 0 0 6.9 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path><path d="M2 10h20"></path></svg>
+                Experience
+            </h2>
+            <div class="space-y-6">
+                <div class="experience-item">
+                    <h3 class="job-title">Retail Accounts Manager (Full-Time)</h3>
+                    <p class="company-name">Globus Global Safety | American Division, Ramsey USA</p>
+                    <p class="date-location">2024 – Present</p>
+                    <ul>
+                        <li>Accounts manager responsible for client relations, product management & development.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3 class="job-title">Assistant General Manager (Full-Time)</h3>
+                    <p class="company-name">Caribou Coffee | Minneapolis MN</p>
+                    <p class="date-location">2024 – 2025</p>
+                    <ul>
+                        <li>Managed daily store operations, including employee scheduling, inventory control, and customer service.</li>
+                        <li>Mediated conflict resolution between employees, fostering a collaborative and productive environment.</li>
+                        <li>Mentored baristas and service leads to enhance performance and leadership development.</li>
+                        <li>Worked toward promotion to General Manager by mastering operational procedures and leadership skills.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3 class="job-title">Warehouse Operator / Order Picker (Part-Time)</h3>
+                    <p class="company-name">Medline Industries LP | Rogers MN</p>
+                    <p class="date-location">2024 – 2025</p>
+                    <ul>
+                        <li>Picked and packed medical supply orders with precision and efficiency.</li>
+                        <li>Consistently met pick times while maintaining 100% accuracy.</li>
+                        <li>Balanced part-time work with full-time managerial responsibilities.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3 class="job-title">Customer Service Lead (Full-Time)</h3>
+                    <p class="company-name">The Home Depot | Elk River MN</p>
+                    <p class="date-location">2023 – 2024</p>
+                    <ul>
+                        <li>Supervised front-end associates, managed cash flow, and resolved customer complaints.</li>
+                        <li>Trained new hires on company policies and customer service best practices.</li>
+                        <li>Assisted in operational logistics, including inventory management and scheduling.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3 class="job-title">Deli Clerk (Part-Time)</h3>
+                    <p class="company-name">Coborn's Inc | Princeton MN</p>
+                    <p class="date-location">2021 – 2023</p>
+                    <ul>
+                        <li>Provided high-quality customer service while preparing and packaging deli products.</li>
+                        <li>Maintained food safety standards and ensured proper inventory rotation.</li>
+                        <li>Developed multitasking skills in a fast-paced environment.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="section-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                Education
+            </h2>
+            <div class="education-item">
+                <h3 class="job-title">Self-Directed Studies in Business Administration and Statistical Sciences</h3>
+                <p class="text-gray-700 leading-relaxed mt-1">
+                    Currently pursuing knowledge in business fundamentals, data analysis, and music theory through self-study.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="section-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                Skills
+            </h2>
+            <div class="flex flex-wrap">
+                <span class="skill-tag">Leadership & Team Management</span>
+                <span class="skill-tag">Data Analysis & Statistical Concepts</span>
+                <span class="skill-tag">Customer Service & Conflict Resolution</span>
+                <span class="skill-tag">Inventory Management</span>
+                <span class="skill-tag">Microsoft Office Suite (Excel, Word, Outlook)</span>
+                <span class="skill-tag">Communication & Public Speaking</span>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="section-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 12v0"></path></svg>
+                Additional Information
+            </h2>
+            <ul class="text-gray-700 leading-relaxed">
+                <li>Fluent in Latin terminology and classical philosophy</li>
+                <li>Passionate about Stoicism, music theory, and self-education</li>
+                <li>Fitness enthusiast with a strong dedication to personal growth</li>
+            </ul>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="section-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                Certifications
+            </h2>
+            <div class="certification-item">
+                <h3 class="job-title">Certified Notary Public</h3>
+                <p class="company-name">State of Minnesota</p>
+                <p class="date-location">2023</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                Awards
+            </h2>
+            <div class="space-y-4">
+                 <div class="award-item">
+                    <h3 class="job-title">Golden Bandage Award</h3>
+                    <p class="company-name">Medline Industries</p>
+                    <p class="date-location">2025</p>
+                </div>
+                <div class="award-item">
+                    <h3 class="job-title">Silver Homer Award</h3>
+                    <p class="company-name">The Home Depot</p>
+                    <p class="date-location">2024</p>
+                </div>
+                <div class="award-item">
+                    <h3 class="job-title">Bronze Homer Award</h3>
+                    <p class="company-name">The Home Depot</p>
+                    <p class="date-location">2023</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-text">
+            <p>&copy; 2025 Josh Stafki. All rights reserved.</p>
+        </footer>
+
+    </div>
+    <script>
+        // Script to dynamically insert Lucide icons if needed,
+        // but for this static page, SVG paths are embedded or used via Tailwind classes.
+        // Example: if you were to use lucide-react components, you would render them here.
+        // For now, the SVGs are directly in the HTML or managed by Tailwind's potential future icon integration.
+        // No dynamic script needed for the current icon implementation.
+    </script>
+</body>
+</html>
